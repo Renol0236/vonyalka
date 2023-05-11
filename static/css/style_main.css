@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+body {
+padding: 0;
+margin: 0;
+background: #eee;
+}
+* {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+}
+/* style for the gray banner */
+.banner {
+    background-color: #3f4137;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    list-style: none;
+    margin: 0;
+}
+
+/* style for the logo */
+.logo {
+    height: 65px;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+/* style for the links */
+.link-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: #3f4137;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fdc073;
+    border: 2px solid #fdc073;
+    white-space: nowrap;
+}
+
+.link:not(:first-child) {
+    margin-left: 40px;
+}
+
+.link:hover {
+    background-color: #666959;
+    color: #fdc073;
+    border-color: #fdc073;
+}
+
+.link a {
+    color: #966f6f;
+    text-decoration: none;
+}
+.wrapper {margin:0 auto;width:960px;}
+
+.text {
+    margin-left: 20px;
+}
+
+#fon1 {
+
+   position:fixed;
+   top:-50%;
+   left:-50%;
+   width:200%;
+   height:200%;
+    opacity: 5%;
+}
+#fon1 img {
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   margin:auto;
+   min-width:50%;
+   min-height:50%;
+}

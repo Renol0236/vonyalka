@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+    <title>Страница не найдена</title>
+    <link href="{{url_for('static', filename='css/style_404.css')}}" rel="stylesheet">
+</head>
+<body>
+<center>
+<div class="container">
+<h1>Нет доступа к странице</h1>
+<a href="{{ url_for('main_page')}}">Вернуться на главную страницу</a><br>
+    <br>
+<a href="{{ url_for('login')}}">Авторизироваться</a>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+    <link href="{{url_for('static', filename='css/style_login.css')}}" rel="stylesheet">
+</head>
+<body>
+{% for msg in get_flashed_messages() %}
+<div>{{msg}}</div>
+{% endfor %}
+<form action="/login" method="post">
+    <p><label>Username: </label> <input type='text' name="username" value="" required />
+    <p><label>Password: </label> <input type='password' name="password" value="" required />
+    <p><input type="submit" value="Отправить" />
+</form>
+<a href="{{ url_for('regestration')}}">Зарегестрироваться</a>
+</body>
+</html>

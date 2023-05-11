@@ -1,0 +1,25 @@
+body
+{
+  height: 100%;
+  background: #eee;
+}
+
+.container {
+    margin-top: 20%;
+}
+h1 {
+    font-size: 4em;
+}
+
+a {
+    font-size: 2em;
+    color: #d07575;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 1.9em;
+    color: #4a93be;
+    text-decoration: none;
+    cursor: pointer;
+}

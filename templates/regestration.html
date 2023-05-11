@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegestrationPage</title>
+    <link href="{{url_for('static', filename='css/style_reg.css')}}" rel="stylesheet">
+</head>
+<body>
+
+<form action="{{url_for('regestration')}}" method="POST">
+    {% for cat, msg in get_flashed_messages(True) %}
+    <div class="flash {{cat}}">{{msg}}</div>
+    {% endfor %}
+    <h2>Регистрация</h2>
+    <label for="username">Логин:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+    <label for="email">Почта:</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Отправить данные</button>
+    <a class="link" href="{{url_for('main_page')}}">Вернуться на главную</a>
+</form>
+
+</body>
+</html>
