@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>LoginPage</title>
+    <title>Авторизация</title>
     <link href="{{url_for('static', filename='css/style_login.css')}}" rel="stylesheet">
 </head>
 <body>
-{% for msg in get_flashed_messages() %}
-<div>{{msg}}</div>
-{% endfor %}
-<form action="/login" method="post">
-    <p><label>Username: </label> <input type='text' name="username" value="" required />
-    <p><label>Password: </label> <input type='password' name="password" value="" required />
-    <p><input type="submit" value="Отправить" />
-</form>
-<a href="{{ url_for('regestration')}}">Зарегестрироваться</a>
+  <form method="POST">
+    <h2>Вход</h2>
+    <label for="username">Логин</label>
+    <input type="text" id="username" placeholder="Введите логин" name="username">
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" placeholder="Введите пароль" name="password">
+
+    <label for="rm">Запомнить меня</label>
+    <input type="checkbox" id="rm" name="rm">
+    <button type="submit">Войти</button>
+    {% for cat,msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}}">{{msg}}</div>
+    {% endfor %}
+    <div class="link">
+      <a href="{{ url_for('regestration')}}">Зарегестрироваться</a>
+    </div>
+    <div class="link">
+      <a href="{{url_for('main_page')}}">Вернуться на главную</a>
+    </div>
+  </form>
 </body>
 </html>

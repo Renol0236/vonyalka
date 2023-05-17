@@ -7,19 +7,19 @@
   <title>unset title</title>
 {% endif %}
 {% endblock %}
+{% block styles %}
+{{pass}}
+{% endblock %}
 {% block content -%}
 <link href="{{url_for('static', filename='css/style_main.css')}}" rel="stylesheet">
-<link href="{{url_for('static', filename='css/style_add_post.css')}}" rel="stylesheet">
 </head>
 <body>
-
 <ul class="banner">
-    <li><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kolovrat_%28%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D0%B0%D1%82%29_Swastika_%28%D0%A1%D0%B2%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0%29_-_Rodnovery.svg/120px-Kolovrat_%28%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D0%B0%D1%82%29_Swastika_%28%D0%A1%D0%B2%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0%29_-_Rodnovery.svg.png" alt="My Logo"></li>
+    <li><img class="logo" src="https://uploadsss.wikimedia.org/wikipedia/commons/thumb/0/03/Kolovrat_%28%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D0%B0%D1%82%29_Swastika_%28%D0%A1%D0%B2%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0%29_-_Rodnovery.svg/120px-Kolovrat_%28%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D0%B0%D1%82%29_Swastika_%28%D0%A1%D0%B2%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0%29_-_Rodnovery.svg.png" alt="Logo"></li>
     <li class="link-container">
-        <li class="link"><a href="{{url_for('main_page')}}">Главная</a></li>
-        <li class="link"><a href="{{url_for('login')}}">Логин</a></li>
-        <li class="link"><a href="{{url_for('regestration')}}">Регистрация</a></li>
-        <li class="link"><a href="{{url_for('add_post')}}">Добавить объявление</a></li>
+    {% for m in menu %}
+        <li class="link"><a href="/{{m.url}}">{{m.title}}</a></li>
+    {% endfor %}
     </li>
 </ul>
 {% endblock -%}

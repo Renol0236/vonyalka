@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style_lc.css')}}">
+</head>
+<body>
+  <div class="container">
+    <div class="avatar-container">
+      <img class="avatar" src="path/to/avatar.jpg" alt="Аватар пользователя">
+      <button class="btn">Загрузить аватар</button>
+    </div>
+    <div class="info-container">
+      <p>Имя пользователя: <span id="nickname">{{currentUserName}}</span></p>
+      <p>Почта: <span id="email">example@example.com</span></p>
+    </div>
+    <div>
+      <a class="logout-link" href="{{url_for('logout')}}">Выйти из аккаунта</a>
+      <a class='logout-link' href="{{url_for('main_page')}}">Вернуться на главную</a>
+    </div>
+  </div>
+</body>
+</html>

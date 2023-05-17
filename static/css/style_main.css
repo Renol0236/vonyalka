@@ -86,3 +86,8 @@ background: #eee;
    min-width:50%;
    min-height:50%;
 }
+.post {
+    color: #3f4137;
+    text-decoration: none;
+    margin-left: 5px;
+}
